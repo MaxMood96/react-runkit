@@ -1,12 +1,16 @@
 {
   "dependencies": {
-    "next": "beta",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "next": "11.1.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "dev": "cp ../dist/react-runkit.js ./pages && next",
     "build": "cp ../dist/react-runkit.js ./pages && next build",
-    "start": "next start"
-  }
+    "start": "next start",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
