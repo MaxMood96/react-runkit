@@ -15,7 +15,9 @@
   "scripts": {
     "build": "npm run build-dev && npm run build-prod",
     "build-prod": "webpack -p --config webpack.js --output-filename react-runkit.min.js",
-    "build-dev": "webpack --config webpack.js --output-filename react-runkit.js"
+    "build-dev": "webpack --config webpack.js --output-filename react-runkit.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "main": "./dist/react-runkit.js",
   "name": "react-runkit",
@@ -24,5 +26,9 @@
   "repository": "https://github.com/runkitdev/react-runkit",
   "author": "",
   "license": "MIT",
-  "runkitExampleFilename": "runkit-example.js"
+  "runkitExampleFilename": "runkit-example.js",
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
+  }
 }
