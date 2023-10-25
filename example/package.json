@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "next": "beta",
+    "next": "13.5.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
